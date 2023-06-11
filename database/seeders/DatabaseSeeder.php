@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Parking::factory()->count(8)->create();
+        Parking::factory()->count(8)->create();
                 DB::table('users')->insert([
             'name' => fake()->name(),
             'email' =>'parkingo@gmail.com',

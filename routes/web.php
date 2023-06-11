@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\FrontController;
 
 
 
@@ -18,6 +19,7 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 $controller_path = 'App\Http\Controllers';
+Route::resource('/front', FrontController::class);
 
 // Main Page Route
 Route::post('do-login', [LoginController::class, 'doLogin'])->name('do-login');
